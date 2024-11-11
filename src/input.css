@@ -9,5 +9,5 @@
 	color: var(--main-color);
 }
 .landing {
-	background-image: url(imgs/landing/01.jpg);
+	background-image: url(./imgs/landing/01.jpg);
 }

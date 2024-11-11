@@ -1230,9 +1230,9 @@ input[type="range"]:active::-webkit-slider-thumb {
   vertical-align: bottom;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-\[0\.6rem\] {
@@ -1247,11 +1247,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1515,7 +1510,7 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .landing {
-  background-image: url(imgs/landing/01.jpg);
+  background-image: url(./imgs/landing/01.jpg);
 }
 
 .empty\:hidden:empty {
