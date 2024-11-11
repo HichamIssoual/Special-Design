@@ -779,6 +779,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-bottom: 0px;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -815,10 +819,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-top: 2rem;
 }
 
-.mb-14 {
-  margin-bottom: 3.5rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -851,6 +851,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   height: 0px;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -867,8 +871,32 @@ input[type="range"]:active::-webkit-slider-thumb {
   width: 0px;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-2 {
   width: 0.5rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
 }
 
 .w-auto {
@@ -968,16 +996,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   transform: none;
 }
 
-@keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -1029,6 +1047,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1175,6 +1197,11 @@ input[type="range"]:active::-webkit-slider-thumb {
 .bg-danger {
   --tw-bg-opacity: 1;
   background-color: rgb(220 76 100 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1547,12 +1574,18 @@ input[type="range"]:active::-webkit-slider-thumb {
   --main-color: #0846f7;
 }
 
+/*Start Global Rules*/
+
 .main-color {
   color: var(--main-color);
 }
 
 .landing {
   background-image: url(./imgs/landing/01.jpg);
+}
+
+.bg-main-color {
+  background-color: var(--main-color);
 }
 
 .empty\:hidden:empty {
@@ -1829,12 +1862,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 @media not all and (min-width: 768px) {
   .max-md\:flex-col-reverse {
     flex-direction: column-reverse;
-  }
-}
-
-@media not all and (min-width: 640px) {
-  .max-sm\:flex-col {
-    flex-direction: column;
   }
 }
 

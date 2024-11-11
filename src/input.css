@@ -5,10 +5,14 @@
 :root {
 	--main-color: #0846f7;
 }
+/*Start Global Rules*/
 .main-color {
 	color: var(--main-color);
 }
 
 .landing {
 	background-image: url(./imgs/landing/01.jpg);
+}
+.bg-main-color {
+	background-color: var(--main-color);
 }
