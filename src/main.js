@@ -8,7 +8,7 @@ let imgs = [
 	"03.jpg",
 	"04.jpg",
 	"05.jpg",
-	"06.jpg",
+	"06.png",
 	"07.jpg",
 	"08.jpg",
 	"09.jpg",
@@ -36,10 +36,40 @@ let progressPosition = progressTriger.offsetTop;
 window.onscroll = function() {
 	if(window.scrollY >= progressPosition){
 		progressAll.forEach((ele)=>{
-			console.log(ele);
 			ele.style.width = ele.dataset.width;
 		})
 	}
 }
 
 // End showing the progress of skill when i scroll the him with animation
+// Start Gallery Features
+// hunt all images 
+let allImgs = document.querySelectorAll(".gallery-imgs > img");
+allImgs.forEach((ele)=>{
+	ele.addEventListener("click",function(){
+		let copyImage = ele.cloneNode(true);
+		poupImage(copyImage);
+	})
+})
+// create Pop Function
+function poupImage(ele) {
+	let poupContain = document.createElement("div");
+	poupContain.classList.add("poup-img");
+	let imgContain = document.createElement("div");
+	imgContain.classList.add("img-contain");
+	let imageName = document.createElement("h1");
+	imageName.classList.add("img-name");
+	imageName.append(`Image ${ele.dataset.number}`);
+	let closePoup = document.createElement("span");
+	closePoup.classList.add("close-poup");
+	closePoup.onclick = function () {
+		poupContain.remove();
+	}
+	closePoup.append("X");
+	imgContain.append(closePoup);
+	imgContain.append(imageName);
+	imgContain.append(ele);
+	poupContain.append(imgContain);
+	document.body.append(poupContain);
+}
+// end Gallery Features

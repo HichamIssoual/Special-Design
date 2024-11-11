@@ -879,6 +879,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   width: 0.5rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-auto {
   width: auto;
 }
@@ -1575,6 +1579,63 @@ input[type="range"]:active::-webkit-slider-thumb {
 .progress {
   width: 0px;
   transition-duration: 1s;
+}
+
+/*End Global Rules*/
+
+.gallery-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.gallery-imgs img {
+  cursor: pointer;
+}
+
+.poup-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000d6;
+}
+
+.poup-img .img-contain {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+}
+
+.poup-img .img-contain img {
+  width: 100%;
+}
+
+.img-name {
+  text-align: center;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+
+.close-poup {
+  display: inline-block;
+  background-color: var(--main-color);
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: -17px;
+  right: -5px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
