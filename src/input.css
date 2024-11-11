@@ -16,3 +16,7 @@
 .bg-main-color {
 	background-color: var(--main-color);
 }
+.progress {
+	width: 0px;
+	transition-duration: 1s;
+}

@@ -4,25 +4,42 @@ let landing = document.querySelector(".landing");
 // create Array Of Images
 let imgs = [
 	"01.jpg",
-	"02.jpg", 
-	"03.jpg", 
-	"04.jpg", 
-	"05.jpg", 
-	"06.jpg", 
-	"07.jpg", 
-	"08.jpg", 
-	"09.jpg", 
+	"02.jpg",
+	"03.jpg",
+	"04.jpg",
+	"05.jpg",
+	"06.jpg",
+	"07.jpg",
+	"08.jpg",
+	"09.jpg",
 	"10.jpg"
 	];
 // check if user have any image in local storage
-if(localStorage.getItem("img")){
+if (localStorage.getItem("img")) {
 	landing.style.backgroundImage = localStorage.getItem("img");
 }
 // set interval for doing the operation of number of seconds
-setInterval(()=>{
+setInterval(() => {
 	let randIndex = Math.floor(Math.random() * imgs.length);
 	landing.style.backgroundImage = `url(./imgs/landing/${imgs[randIndex]})`;
-	// add image to local storage
+    // add image to local storage
 	window.localStorage.setItem("img", `url(./imgs/landing/${imgs[randIndex]})`)
-},8000)
+}, 8000)
 // end Random background Image of Landing page
+
+
+// start showing the progress of skill when i scroll the him with animation
+// hunt the progress div
+let progressTriger = document.querySelector(".skills-trigger");
+let progressAll= document.querySelectorAll(".progress");
+let progressPosition = progressTriger.offsetTop;
+window.onscroll = function() {
+	if(window.scrollY >= progressPosition){
+		progressAll.forEach((ele)=>{
+			console.log(ele);
+			ele.style.width = ele.dataset.width;
+		})
+	}
+}
+
+// End showing the progress of skill when i scroll the him with animation
